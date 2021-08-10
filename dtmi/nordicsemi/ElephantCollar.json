@@ -1,0 +1,58 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:com:nordicsemi:ElephantCollar;1",
+  "@type": "Interface",
+  "displayName": "ElephantCollar",
+  "description": "Reports elephant collar alerts and results from TinyML models.",
+  "contents": [
+    {
+      "@type": [
+        "Telemetry",
+        "EIModelResult"
+      ],
+      "name": "inference",
+      "displayName" : "EIModelResult",
+      "description" : "Result score of TinyML model.",
+      "schema": "double"
+    },
+    {
+      "@type": [
+        "Property",
+        "Threshold"
+      ],
+      "name": "targetThreshold",
+      "schema": "double",
+      "displayName": "Target Threshold",
+      "description": "Allows to remotely specify the desired threshold of model alerts.",
+      "writable": true
+    },
+    {
+      "@type": [
+        "Property",
+        "Temperature"
+      ],
+      "name": "maxTempSinceLastReboot",
+      "schema": "double",
+      "unit" : "degreeCelsius",
+      "displayName": "Max temperature since last reboot.",
+      "description": "Returns the max temperature since last device reboot."
+    },
+    {
+      "@type": "Command",
+      "name": "getLocationReport",
+      "displayName": "Get location.",
+      "description": "This command returns GPS location of the animal.",
+      "request": {
+        "name": "since",
+        "displayName": "Since",
+        "description": "Period to return the max-min report.",
+        "schema": "dateTime"
+      },
+      "response": {
+        "name": "LocationData",
+        "displayName": "LocationData",
+        "schema": "integer"
+      }
+    }
+  ]
+}
