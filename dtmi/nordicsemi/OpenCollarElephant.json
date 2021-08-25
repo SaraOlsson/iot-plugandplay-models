@@ -1,10 +1,10 @@
 {
-    "@id": "dtmi:<CompanyName>:<DeviceName>;1",
+    "@id": "dtmi:nordicsemi:OpenCollarElephant;1",
     "displayName": {
-      "en": "<Device Name for UI>"
+      "en": "SarasP15Model"
     },
     "description": {
-      "en": "<Description of the device>"
+      "en": "Device model for Project 15"
     },
     "@context": [
       "dtmi:dtdl:context;2"
@@ -12,7 +12,7 @@
     "@type": "Interface",
     "contents": [
       {
-        "@id": "dtmi:<CompanyName>:<DeviceName>:<DeviceTelemetryName>;1",
+        "@id": "dtmi:nordicsemi:OpenCollarElephant:AllTelemetry;1",
         "@type": "Telemetry",
         "name": "DeviceTelemetry",
         "displayName": {
@@ -209,7 +209,7 @@
                           "description": {
                             "en": ""
                           },
-                          "schema": "dtmi:<CompanyName>:<DeviceName>;DecodedPayload;1"
+                          "schema": "dtmi:nordicsemi:OpenCollarElephant;DecodedPayload;1"
                         }
                       ]
                     }
@@ -223,7 +223,7 @@
       ],
       "schemas": [
         {
-          "@id": "dtmi:<CompanyName>:<DeviceName>;DecodedPayload;1",
+          "@id": "dtmi:nordicsemi:OpenCollarElephant;DecodedPayload;1",
           "@type": "Map",
           "mapKey": {
             "name": "PayloadNumber",
@@ -231,11 +231,11 @@
           },
           "mapValue": {
             "name": "PayloadValue",
-            "schema": "dtmi:<CompanyName>:<DeviceName>;DecodedPayload:<DeviceName>Value;1"
+            "schema": "dtmi:nordicsemi:OpenCollarElephant;DecodedPayload:<DeviceName>Value;1"
           }
         },
         {
-          "@id": "dtmi:<CompanyName>:<DeviceName>;DecodedPayload:<DeviceName>Value;1",
+          "@id": "dtmi:nordicsemi:OpenCollarElephant;DecodedPayload:<DeviceName>Value;1",
           "@type": "Object",
           "fields": [
             {
