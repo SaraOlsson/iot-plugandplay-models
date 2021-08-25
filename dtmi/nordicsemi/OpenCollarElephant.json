@@ -1,0 +1,294 @@
+{
+    "@id": "dtmi:<CompanyName>:<DeviceName>;1",
+    "displayName": {
+      "en": "<Device Name for UI>"
+    },
+    "description": {
+      "en": "<Description of the device>"
+    },
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:<CompanyName>:<DeviceName>:<DeviceTelemetryName>;1",
+        "@type": "Telemetry",
+        "name": "DeviceTelemetry",
+        "displayName": {
+          "en": "<Telemetry name for UI>"
+        },
+        "description": {
+          "en": "<Description of telemetry>"
+        },
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "end_device_ids",
+              "displayName": {
+                "en": "Host Name"
+              },
+              "description": {
+                "en": "The hostname of the reader that generated this event."
+              },
+              "schema": {
+                "@type": "Object",
+                "fields": [
+                  {
+                    "name": "device_id",
+                    "displayName": {
+                      "en": "Device ID"
+                    },
+                    "description": {
+                      "en": "Device ID"
+                    },
+                    "schema": "string"
+                  },
+                  {
+                    "name": "application_ids",
+                    "displayName": {
+                      "en": "Application IDs"
+                    },
+                    "description": {
+                      "en": "Application IDs"
+                    },
+                    "schema": {
+                      "@type": "Object",
+                      "fields": [
+                        {
+                          "name": "application_id",
+                          "displayName": {
+                            "en": "Application ID"
+                          },
+                          "description": {
+                            "en": "Application ID"
+                          },
+                          "schema": "string"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "name": "dev_eui",
+                    "displayName": {
+                      "en": "Device EUI"
+                    },
+                    "description": {
+                      "en": "Device EUI"
+                    },
+                    "schema": "string"
+                  },
+                  {
+                    "name": "join_eui",
+                    "displayName": {
+                      "en": "Join EUI"
+                    },
+                    "description": {
+                      "en": "Join EUI"
+                    },
+                    "schema": "string"
+                  },
+                  {
+                    "name": "dev_addr",
+                    "displayName": {
+                      "en": "Device Address"
+                    },
+                    "description": {
+                      "en": "Device Address"
+                    },
+                    "schema": "string"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "correlation_ids",
+              "displayName": {
+                "en": "Correlation IDs"
+              },
+              "description": {
+                "en": "Correlation IDs"
+              },
+              "schema": {
+                "@type": "Array",
+                "elementSchema": {
+                  "@type": "Object",
+                  "fields": [
+                    {
+                      "name": "arrayValue",
+                      "displayName": {
+                        "en": "Value of array"
+                      },
+                      "description": {
+                        "en": ""
+                      },
+                      "schema": "string"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "timestamp",
+              "displayName": {
+                "en": "Time Stamp"
+              },
+              "description": {
+                "en": "The UTC time at which the event was processed and queued for delivery."
+              },
+              "schema": "dateTime"
+            },
+            {
+              "name": "uplink_message",
+              "displayName": {
+                "en": "Uplink Message"
+              },
+              "description": {
+                "en": ""
+              },
+              "schema": {
+                "@type": "Object",
+                "fields": [
+                  {
+                    "name": "session_key_id",
+                    "displayName": {
+                      "en": "Session Key Id"
+                    },
+                    "description": {
+                      "en": ""
+                    },
+                    "schema": "string"
+                  },
+                  {
+                    "name": "f_port",
+                    "displayName": {
+                      "en": "F Port"
+                    },
+                    "description": {
+                      "en": ""
+                    },
+                    "schema": "integer"
+                  },
+                  {
+                    "name": "f_cnt",
+                    "displayName": {
+                      "en": "F Cnt"
+                    },
+                    "description": {
+                      "en": ""
+                    },
+                    "schema": "integer"
+                  },
+                  {
+                    "name": "frm_payload",
+                    "displayName": {
+                      "en": "Frm Payload"
+                    },
+                    "description": {
+                      "en": ""
+                    },
+                    "schema": "string"
+                  },
+                  {
+                    "name": "decoded_payload",
+                    "displayName": {
+                      "en": "Decoded Payload"
+                    },
+                    "description": {
+                      "en": ""
+                    },
+                    "schema": {
+                      "@type": "Object",
+                      "fields": [
+                        {
+                          "name": "session_key_id",
+                          "displayName": {
+                            "en": "Session Key Id"
+                          },
+                          "description": {
+                            "en": ""
+                          },
+                          "schema": "dtmi:<CompanyName>:<DeviceName>;DecodedPayload;1"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+      ],
+      "schemas": [
+        {
+          "@id": "dtmi:<CompanyName>:<DeviceName>;DecodedPayload;1",
+          "@type": "Map",
+          "mapKey": {
+            "name": "PayloadNumber",
+            "schema": "string"
+          },
+          "mapValue": {
+            "name": "PayloadValue",
+            "schema": "dtmi:<CompanyName>:<DeviceName>;DecodedPayload:<DeviceName>Value;1"
+          }
+        },
+        {
+          "@id": "dtmi:<CompanyName>:<DeviceName>;DecodedPayload:<DeviceName>Value;1",
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "azi",
+              "displayName": {
+                "en": "AZI"
+              },
+              "description": {
+                "en": ""
+              },
+              "schema": "integer"
+            },
+            {
+              "name": "cn0",
+              "displayName": {
+                "en": "CN0"
+              },
+              "description": {
+                "en": ""
+              },
+              "schema": "integer"
+            },
+            {
+              "name": "con",
+              "displayName": {
+                "en": "CON"
+              },
+              "description": {
+                "en": ""
+              },
+              "schema": "string"
+            },
+            {
+              "name": "ele",
+              "displayName": {
+                "en": "ELE"
+              },
+              "description": {
+                "en": ""
+              },
+              "schema": "integer"
+            },
+            {
+              "name": "id",
+              "displayName": {
+                "en": "ID"
+              },
+              "description": {
+                "en": ""
+              },
+              "schema": "integer"
+            }
+          ]
+        }
+      ]
+    }
