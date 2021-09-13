@@ -12,6 +12,17 @@
     "@type": "Interface",
     "contents": [
       {
+        "@type": [
+          "Telemetry",
+          "Temperature"
+        ],
+        "name": "temperature",
+        "displayName" : "Temperature",
+        "description" : "Temperature in degrees Celsius.",
+        "schema": "double",
+        "unit": "degreeCelsius"
+      },
+      {
         "@id": "dtmi:nordicsemi:OpenCollarElephant:AllTelemetry;1",
         "@type": "Telemetry",
         "name": "DeviceTelemetry",
@@ -231,11 +242,11 @@
           },
           "mapValue": {
             "name": "PayloadValue",
-            "schema": "dtmi:nordicsemi:OpenCollarElephant;DecodedPayload:<DeviceName>Value;1"
+            "schema": "dtmi:nordicsemi:OpenCollarElephant;DecodedPayload:OpenCollarElephantValue;1"
           }
         },
         {
-          "@id": "dtmi:nordicsemi:OpenCollarElephant;DecodedPayload:<DeviceName>Value;1",
+          "@id": "dtmi:nordicsemi:OpenCollarElephant;DecodedPayload:OpenCollarElephantValue;1",
           "@type": "Object",
           "fields": [
             {
