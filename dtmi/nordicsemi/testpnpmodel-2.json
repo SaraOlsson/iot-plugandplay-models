@@ -32,6 +32,17 @@
         "unit": "degreeCelsius"
       },
       {
+        "@type": [
+          "Telemetry",
+          "Location"
+        ],
+        "displayName": {
+          "en": "Location"
+        },
+        "name": "geolocation",
+        "schema": "geopoint"
+      },
+      {
         "@id": "dtmi:nordicsemi:eielephantcollar:AllTelemetry;1",
         "@type": "Telemetry",
         "name": "body",
@@ -44,6 +55,15 @@
         "schema": {
           "@type": "Object",
           "fields": [
+            {
+              "@type": "Telemetry",
+              "comment": "Saras Level percentage",
+              "displayName": {
+                "en": "Saras Battery Level"
+              },
+              "name": "sarasbattery",
+              "schema": "double"
+            },
             {
               "name": "end_device_ids",
               "displayName": {
