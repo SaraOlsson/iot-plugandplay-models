@@ -32,6 +32,83 @@
         "unit": "degreeCelsius"
       },
       {
+        "@id": "dtmi:nordicsemi:eielephantcollar:AllTelemetry;1",
+        "@type": "Telemetry",
+        "name": "body",
+        "displayName": {
+          "en": "Body"
+        },
+        "description": {
+          "en": "Telemetry body"
+        },
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "end_device_ids",
+              "displayName": {
+                "en": "Host Name"
+              },
+              "description": {
+                "en": "The hostname of the reader that generated this event."
+              },
+              "schema": {
+                "@type": "Object",
+                "fields": [
+                  {
+                    "name": "device_id",
+                    "displayName": {
+                      "en": "Device ID"
+                    },
+                    "description": {
+                      "en": "Device ID"
+                    },
+                    "schema": "string"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "correlation_ids",
+              "displayName": {
+                "en": "Correlation IDs"
+              },
+              "description": {
+                "en": "Correlation IDs"
+              },
+              "schema": {
+                "@type": "Array",
+                "elementSchema": {
+                  "@type": "Object",
+                  "fields": [
+                    {
+                      "name": "arrayValue",
+                      "displayName": {
+                        "en": "Value of array"
+                      },
+                      "description": {
+                        "en": ""
+                      },
+                      "schema": "string"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "name": "received_at",
+              "displayName": {
+                "en": "Time Stamp"
+              },
+              "description": {
+                "en": "The UTC time at which the event was processed and queued for delivery."
+              },
+              "schema": "dateTime"
+            }
+          ]
+        }
+      },
+      {
         "@type": "Command",
         "commandType": "synchronous",
         "displayName": {
