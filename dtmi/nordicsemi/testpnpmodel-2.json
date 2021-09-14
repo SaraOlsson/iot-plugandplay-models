@@ -62,7 +62,7 @@
                 "en": "Saras Battery Level"
               },
               "name": "sarasbattery",
-              "schema": "double"
+              "schema": "integer"
             },
             {
               "name": "end_device_ids",
