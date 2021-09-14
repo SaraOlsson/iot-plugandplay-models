@@ -12,6 +12,15 @@
     "@type": "Interface",
     "contents": [
       {
+        "@type": "Telemetry",
+        "comment": "Level percentage",
+        "displayName": {
+          "en": "Battery Level"
+        },
+        "name": "battery",
+        "schema": "integer"
+      },
+      {
         "@type": [
           "Telemetry",
           "Temperature"
