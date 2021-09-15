@@ -55,14 +55,14 @@
         "unit": "kilopascal"
       },
       {
-        "@type": [
-          "Telemetry",
-          "Location"
-        ],
-        "displayName": {
-          "en": "Location"
-        },
+        "@type": "Telemetry",
         "name": "gps",
+        "displayName": {
+          "en": "GPS Coordinate"
+        },
+        "description": {
+          "en": "GPS Data from Grove GPS Module. https://www.seeedstudio.com/Grove-GPS-Module.html"
+        },
         "schema": "point"
       },
       {
