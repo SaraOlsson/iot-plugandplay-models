@@ -62,8 +62,8 @@
         "displayName": {
           "en": "Location"
         },
-        "name": "geolocation",
-        "schema": "geopoint"
+        "name": "gps",
+        "schema": "point"
       },
       {
         "@type": "Command",
