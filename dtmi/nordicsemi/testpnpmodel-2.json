@@ -32,15 +32,15 @@
         "unit": "degreeCelsius"
       },
       {
-        "@type": [
-          "Telemetry",
-          "Location"
-        ],
+        "@type": "Telemetry",
+        "name": "gps",
         "displayName": {
-          "en": "Location"
+          "en": "GPS Coordinate"
         },
-        "name": "geolocation",
-        "schema": "geopoint"
+        "description": {
+          "en": "GPS Data"
+        },
+        "schema": "point"
       },
       {
         "@id": "dtmi:nordicsemi:eielephantcollar:AllTelemetry;1",
@@ -158,24 +158,5 @@
           }
         }
       }
-      ],
-      "schemas": [
-        {
-          "@id": "dtmi:nordicsemi:testpnpmodel:SensorsEnum;1",
-          "@type": "Enum",
-          "displayName": {
-            "en": "Enum"
-          },
-          "enumValues": [
-            {
-              "displayName": {
-                "en": "Location"
-              },
-              "enumValue": "geolocation",
-              "name": "Location"
-            }
-          ],
-          "valueSchema": "string"
-        }
       ]
     }
