@@ -74,21 +74,7 @@
                     "description": {
                       "en": ""
                     },
-                    "schema": {
-                      "@type": "Object",
-                      "fields": [
-                        {
-                          "name": "session_key_id",
-                          "displayName": {
-                            "en": "Session Key Id"
-                          },
-                          "description": {
-                            "en": ""
-                          },
-                          "schema": "dtmi:nordicsemi:testpnpmodel;DecodedPayload;1"
-                        }
-                      ]
-                    }
+                    "schema": "dtmi:nordicsemi:testpnpmodel;DecodedPayload;1"   
                   }
                 ]
               }
