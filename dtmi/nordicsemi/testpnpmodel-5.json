@@ -67,76 +67,62 @@
                 "@type": "Object",
                 "fields": [
                   {
-                    "name": "decoded_payload",
+                    "name": "locations",
                     "displayName": {
-                      "en": "Decoded Payload"
+                      "en": "Locations"
                     },
                     "description": {
-                      "en": ""
+                      "en": "Locations decs"
                     },
                     "schema": {
                       "@type": "Object",
                       "fields": [
                         {
-                          "name": "locations",
+                          "name": "frm-payload",
                           "displayName": {
-                            "en": "Locations"
+                            "en": "Frm-payload"
                           },
                           "description": {
-                            "en": "Locations decs"
+                            "en": "Frm-payload decs"
                           },
                           "schema": {
                             "@type": "Object",
                             "fields": [
                               {
-                                "name": "frm-payload",
+                                "name": "latitude",
                                 "displayName": {
-                                  "en": "Frm-payload"
+                                  "en": "Latitude"
                                 },
                                 "description": {
-                                  "en": "Frm-payload decs"
+                                  "en": "Latitude decs"
                                 },
-                                "schema": {
-                                  "@type": "Object",
-                                  "fields": [
-                                    {
-                                      "name": "latitude",
-                                      "displayName": {
-                                        "en": "Latitude"
-                                      },
-                                      "description": {
-                                        "en": "Latitude decs"
-                                      },
-                                      "schema": "integer"   
-                                    },
-                                    {
-                                      "name": "longitude",
-                                      "displayName": {
-                                        "en": "Longitude"
-                                      },
-                                      "description": {
-                                        "en": "Longitude decs"
-                                      },
-                                      "schema": "integer"   
-                                    },
-                                    {
-                                      "name": "altitude",
-                                      "displayName": {
-                                        "en": "Altitude"
-                                      },
-                                      "description": {
-                                        "en": "Altitude decs"
-                                      },
-                                      "schema": "integer"   
-                                    }
-                                  ]
-                                }    
+                                "schema": "integer"   
+                              },
+                              {
+                                "name": "longitude",
+                                "displayName": {
+                                  "en": "Longitude"
+                                },
+                                "description": {
+                                  "en": "Longitude decs"
+                                },
+                                "schema": "integer"   
+                              },
+                              {
+                                "name": "altitude",
+                                "displayName": {
+                                  "en": "Altitude"
+                                },
+                                "description": {
+                                  "en": "Altitude decs"
+                                },
+                                "schema": "integer"   
                               }
                             ]
                           }    
                         }
                       ]
-                    }   
+                    }    
                   }
                 ]
               }
