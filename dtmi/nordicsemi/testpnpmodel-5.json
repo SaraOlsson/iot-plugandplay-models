@@ -56,14 +56,14 @@
           "@type": "Object",
           "fields": [
             {
-              "name": "sarasmess",
+              "name": "sarasdata",
               "displayName": {
-                "en": "Saras Message"
+                "en": "Saras data"
               },
               "description": {
-                "en": "Saras Message description"
+                "en": "Saras Data description"
               },
-              "schema": "string"
+              "schema": "double"
             }
           ]
         }
