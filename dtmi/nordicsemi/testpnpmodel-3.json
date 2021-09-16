@@ -41,6 +41,36 @@
           "en": "GPS Data"
         },
         "schema": "point"
+      },
+      {
+        "@type": "Command",
+        "commandType": "synchronous",
+        "displayName": {
+          "en": "SetThreshold"
+        },
+        "name": "setThreshold",
+        "request": {
+          "@type": "CommandPayload",
+          "displayName": {
+            "en": "Parameters"
+          },
+          "name": "parameters",
+          "schema": {
+            "@type": "Object",
+            "displayName": {
+              "en": "Object"
+            },
+            "fields": [
+              {
+                "displayName": {
+                  "en": "Threshold"
+                },
+                "name": "threshold",
+                "schema": "double"
+              }
+            ]
+          }
+        }
       }
       ]
     }
