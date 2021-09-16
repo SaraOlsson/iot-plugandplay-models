@@ -56,76 +56,14 @@
           "@type": "Object",
           "fields": [
             {
-              "name": "uplink_message",
+              "name": "sarasmess",
               "displayName": {
-                "en": "Uplink Message"
+                "en": "Saras Message"
               },
               "description": {
-                "en": ""
+                "en": "Saras Message description"
               },
-              "schema": {
-                "@type": "Object",
-                "fields": [
-                  {
-                    "name": "locations",
-                    "displayName": {
-                      "en": "Locations"
-                    },
-                    "description": {
-                      "en": "Locations decs"
-                    },
-                    "schema": {
-                      "@type": "Object",
-                      "fields": [
-                        {
-                          "name": "frm-payload",
-                          "displayName": {
-                            "en": "Frm-payload"
-                          },
-                          "description": {
-                            "en": "Frm-payload decs"
-                          },
-                          "schema": {
-                            "@type": "Object",
-                            "fields": [
-                              {
-                                "name": "latitude",
-                                "displayName": {
-                                  "en": "Latitude"
-                                },
-                                "description": {
-                                  "en": "Latitude decs"
-                                },
-                                "schema": "integer"   
-                              },
-                              {
-                                "name": "longitude",
-                                "displayName": {
-                                  "en": "Longitude"
-                                },
-                                "description": {
-                                  "en": "Longitude decs"
-                                },
-                                "schema": "integer"   
-                              },
-                              {
-                                "name": "altitude",
-                                "displayName": {
-                                  "en": "Altitude"
-                                },
-                                "description": {
-                                  "en": "Altitude decs"
-                                },
-                                "schema": "integer"   
-                              }
-                            ]
-                          }    
-                        }
-                      ]
-                    }    
-                  }
-                ]
-              }
+              "schema": "string"
             }
           ]
         }
