@@ -1,0 +1,178 @@
+{
+    "@id": "dtmi:nordicsemi:testpnpmodel;3",
+    "displayName": {
+      "en": "SarasP15Model"
+    },
+    "description": {
+      "en": "Device model for Project 15"
+    },
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "comment": "Level percentage",
+        "displayName": {
+          "en": "Battery Level"
+        },
+        "name": "battery",
+        "schema": "integer"
+      },
+      {
+        "@type": [
+          "Telemetry",
+          "Temperature"
+        ],
+        "name": "temperature",
+        "displayName" : "Temperature",
+        "description" : "Temperature in degrees Celsius.",
+        "schema": "double",
+        "unit": "degreeCelsius"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "gps",
+        "displayName": {
+          "en": "GPS Coordinate"
+        },
+        "description": {
+          "en": "GPS Data"
+        },
+        "schema": "point"
+      },
+      {
+        "@id": "dtmi:nordicsemi:testpnpmodel:AllTelemetry;1",
+        "@type": "Telemetry",
+        "name": "body",
+        "displayName": {
+          "en": "Body"
+        },
+        "description": {
+          "en": "Telemetry body"
+        },
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "uplink_message",
+              "displayName": {
+                "en": "Uplink Message"
+              },
+              "description": {
+                "en": ""
+              },
+              "schema": {
+                "@type": "Object",
+                "fields": [
+                  {
+                    "name": "decoded_payload",
+                    "displayName": {
+                      "en": "Decoded Payload"
+                    },
+                    "description": {
+                      "en": ""
+                    },
+                    "schema": {
+                      "@type": "Object",
+                      "fields": [
+                        {
+                          "name": "locations",
+                          "displayName": {
+                            "en": "Locations"
+                          },
+                          "description": {
+                            "en": "Locations decs"
+                          },
+                          "schema": {
+                            "@type": "Object",
+                            "fields": [
+                              {
+                                "name": "frm-payload",
+                                "displayName": {
+                                  "en": "Frm-payload"
+                                },
+                                "description": {
+                                  "en": "Frm-payload decs"
+                                },
+                                "schema": {
+                                  "@type": "Object",
+                                  "fields": [
+                                    {
+                                      "name": "latitude",
+                                      "displayName": {
+                                        "en": "Latitude"
+                                      },
+                                      "description": {
+                                        "en": "Latitude decs"
+                                      },
+                                      "schema": "integer"   
+                                    },
+                                    {
+                                      "name": "longitude",
+                                      "displayName": {
+                                        "en": "Longitude"
+                                      },
+                                      "description": {
+                                        "en": "Longitude decs"
+                                      },
+                                      "schema": "integer"   
+                                    },
+                                    {
+                                      "name": "altitude",
+                                      "displayName": {
+                                        "en": "Altitude"
+                                      },
+                                      "description": {
+                                        "en": "Altitude decs"
+                                      },
+                                      "schema": "integer"   
+                                    }
+                                  ]
+                                }    
+                              }
+                            ]
+                          }    
+                        }
+                      ]
+                    }   
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "Command",
+        "commandType": "synchronous",
+        "displayName": {
+          "en": "SetThreshold"
+        },
+        "name": "setThreshold",
+        "request": {
+          "@type": "CommandPayload",
+          "displayName": {
+            "en": "Parameters"
+          },
+          "name": "parameters",
+          "schema": {
+            "@type": "Object",
+            "displayName": {
+              "en": "Object"
+            },
+            "fields": [
+              {
+                "displayName": {
+                  "en": "Threshold"
+                },
+                "name": "threshold",
+                "schema": "double"
+              }
+            ]
+          }
+        }
+      }
+      ]
+    }
