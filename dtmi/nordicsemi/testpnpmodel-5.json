@@ -45,7 +45,7 @@
       {
         "@id": "dtmi:nordicsemi:testpnpmodel:AllTelemetry;1",
         "@type": "Telemetry",
-        "name": "body",
+        "name": "nobody",
         "displayName": {
           "en": "Body"
         },
