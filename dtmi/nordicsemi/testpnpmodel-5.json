@@ -43,9 +43,8 @@
         "schema": "point"
       },
       {
-        "@id": "dtmi:nordicsemi:testpnpmodel:AllTelemetry;1",
         "@type": "Telemetry",
-        "name": "nobody",
+        "name": "bodyobj",
         "displayName": {
           "en": "Body"
         },
