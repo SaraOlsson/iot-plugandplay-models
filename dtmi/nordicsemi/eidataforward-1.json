@@ -1,0 +1,48 @@
+{
+    "@id": "dtmi:nordicsemi:eidataforward;1",
+    "displayName": {
+      "en": "EdgeImpulseDataForward"
+    },
+    "description": {
+      "en": "Device model for Edge Impulse Data Forward with project 15"
+    },
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ],
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "comment": "EI Signature",
+        "displayName": {
+          "en": "Signature"
+        },
+        "name": "signature",
+        "schema": "string"
+      },
+      {
+        "@id": "dtmi:nordicsemi:eidataforward:Payload;1",
+        "@type": "Telemetry",
+        "name": "payload",
+        "displayName": {
+          "en": "Payload"
+        },
+        "description": {
+          "en": "Telemetry payload"
+        },
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "comment": "EI Interval ms",
+              "displayName": {
+                "en": "Interval ms"
+              },
+              "name": "interval_ms",
+              "schema": "double"
+            }
+          ]
+        }
+      }
+      ]
+    }
