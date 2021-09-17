@@ -74,7 +74,7 @@
                     "description": {
                       "en": ""
                     },
-                    "schema": "dtmi:nordicsemi:testpnpmodel;DecodedPayload;1"   
+                    "schema": "dtmi:nordicsemi:testpnpmodel:DecodedPayload;1"   
                   }
                 ]
               }
@@ -115,7 +115,7 @@
       ],
       "schemas": [
         {
-          "@id": "dtmi:nordicsemi:testpnpmodel;DecodedPayload;1",
+          "@id": "dtmi:nordicsemi:testpnpmodel:DecodedPayload;1",
           "@type": "Map",
           "mapKey": {
             "name": "PayloadNumber",
@@ -123,11 +123,11 @@
           },
           "mapValue": {
             "name": "PayloadValue",
-            "schema": "dtmi:nordicsemi:testpnpmodel;DecodedPayload:testpnpmodelValue;1"
+            "schema": "dtmi:nordicsemi:testpnpmodel:DecodedPayload:testpnpmodelValue;1"
           }
         },
         {
-          "@id": "dtmi:nordicsemi:testpnpmodel;DecodedPayload:testpnpmodelValue;1",
+          "@id": "dtmi:nordicsemi:testpnpmodel:DecodedPayload:testpnpmodelValue;1",
           "@type": "Object",
           "fields": [
             {
