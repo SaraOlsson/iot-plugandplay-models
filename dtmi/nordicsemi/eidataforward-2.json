@@ -1,5 +1,5 @@
 {
-    "@id": "dtmi:nordicsemi:eidataforward;1",
+    "@id": "dtmi:nordicsemi:eidataforward;2",
     "displayName": {
       "en": "EdgeImpulseDataForward"
     },
