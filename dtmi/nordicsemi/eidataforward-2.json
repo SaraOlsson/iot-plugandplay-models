@@ -40,6 +40,28 @@
               },
               "name": "interval_ms",
               "schema": "double"
+            },
+            {
+              "comment": "Device type",
+              "displayName": {
+                "en": "Device type"
+              },
+              "name": "device_type",
+              "schema": "string"
+            },
+            {
+              "comment": "EI sampling values",
+              "displayName": {
+                "en": "Sampled values"
+              },
+              "name": "values",
+              "schema": {
+                "@type": "Array",
+                "elementSchema": {
+                  "@type": "Array",
+                  "elementSchema": "double"
+                }
+              }
             }
           ]
         }
