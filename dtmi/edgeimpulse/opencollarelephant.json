@@ -1,5 +1,5 @@
 {
-    "@id": "dtmi:nordicsemi:eielephantcollar;1",
+    "@id": "dtmi:edgeimpulse:OpenCollarElephant;1",
     "displayName": {
       "en": "SarasP15Model"
     },
@@ -32,7 +32,7 @@
         "unit": "degreeCelsius"
       },
       {
-        "@id": "dtmi:nordicsemi:eielephantcollar:AllTelemetry;1",
+        "@id": "dtmi:edgeimpulse:OpenCollarElephant:AllTelemetry;1",
         "@type": "Telemetry",
         "name": "DeviceTelemetry",
         "displayName": {
@@ -229,7 +229,7 @@
                           "description": {
                             "en": ""
                           },
-                          "schema": "dtmi:nordicsemi:eielephantcollar;DecodedPayload;1"
+                          "schema": "dtmi:edgeimpulse:OpenCollarElephant;DecodedPayload;1"
                         }
                       ]
                     }
@@ -243,7 +243,7 @@
       ],
       "schemas": [
         {
-          "@id": "dtmi:nordicsemi:eielephantcollar;DecodedPayload;1",
+          "@id": "dtmi:edgeimpulse:OpenCollarElephant;DecodedPayload;1",
           "@type": "Map",
           "mapKey": {
             "name": "PayloadNumber",
@@ -251,11 +251,11 @@
           },
           "mapValue": {
             "name": "PayloadValue",
-            "schema": "dtmi:nordicsemi:eielephantcollar;DecodedPayload:eielephantcollarValue;1"
+            "schema": "dtmi:edgeimpulse:OpenCollarElephant;DecodedPayload:OpenCollarElephantValue;1"
           }
         },
         {
-          "@id": "dtmi:nordicsemi:eielephantcollar;DecodedPayload:eielephantcollarValue;1",
+          "@id": "dtmi:edgeimpulse:OpenCollarElephant;DecodedPayload:OpenCollarElephantValue;1",
           "@type": "Object",
           "fields": [
             {

@@ -1,6 +1,6 @@
 {
   "@context": "dtmi:dtdl:context;2",
-  "@id": "dtmi:com:nordicsemi:ElephantCollar;1",
+  "@id": "dtmi:com:edgeimpulse:ElephantCollar;1",
   "@type": "Interface",
   "displayName": "ElephantCollar",
   "description": "Reports elephant collar alerts and results from TinyML models.",

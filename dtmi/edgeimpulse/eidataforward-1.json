@@ -1,5 +1,5 @@
 {
-    "@id": "dtmi:nordicsemi:eidataforward;1",
+    "@id": "dtmi:edgeimpulse:eidataforward;1",
     "displayName": {
       "en": "EdgeImpulseDataForward"
     },
@@ -21,7 +21,7 @@
         "schema": "string"
       },
       {
-        "@id": "dtmi:nordicsemi:eidataforward:Payload;1",
+        "@id": "dtmi:edgeimpulse:eidataforward:Payload;1",
         "@type": "Telemetry",
         "name": "payload",
         "displayName": {

@@ -1,5 +1,5 @@
 {
-    "@id": "dtmi:nordicsemi:testpnpmodel;5",
+    "@id": "dtmi:edgeimpulse:testpnpmodel;5",
     "displayName": {
       "en": "SarasP15Model"
     },
@@ -95,6 +95,10 @@
               }
             ]
           }
+        },
+        "response": {
+          "name": "setThresholdAck",
+          "schema": "string"
         }
       }
       ]

@@ -1,5 +1,5 @@
 {
-    "@id": "dtmi:nordicsemi:testpnpmodel;4",
+    "@id": "dtmi:edgeimpulse:testpnpmodel;4",
     "displayName": {
       "en": "SarasP15Model"
     },
@@ -43,7 +43,7 @@
         "schema": "point"
       },
       {
-        "@id": "dtmi:nordicsemi:testpnpmodel:AllTelemetry;1",
+        "@id": "dtmi:edgeimpulse:testpnpmodel:AllTelemetry;1",
         "@type": "Telemetry",
         "name": "body",
         "displayName": {
@@ -74,7 +74,7 @@
                     "description": {
                       "en": ""
                     },
-                    "schema": "dtmi:nordicsemi:testpnpmodel;DecodedPayload;1"   
+                    "schema": "dtmi:edgeimpulse:testpnpmodel;DecodedPayload;1"   
                   }
                 ]
               }
@@ -85,7 +85,7 @@
       ],
       "schemas": [
         {
-          "@id": "dtmi:nordicsemi:testpnpmodel;DecodedPayload;1",
+          "@id": "dtmi:edgeimpulse:testpnpmodel;DecodedPayload;1",
           "@type": "Map",
           "mapKey": {
             "name": "PayloadNumber",
@@ -93,11 +93,11 @@
           },
           "mapValue": {
             "name": "PayloadValue",
-            "schema": "dtmi:nordicsemi:testpnpmodel;DecodedPayload:testpnpmodelValue;1"
+            "schema": "dtmi:edgeimpulse:testpnpmodel;DecodedPayload:testpnpmodelValue;1"
           }
         },
         {
-          "@id": "dtmi:nordicsemi:testpnpmodel;DecodedPayload:testpnpmodelValue;1",
+          "@id": "dtmi:edgeimpulse:testpnpmodel;DecodedPayload:testpnpmodelValue;1",
           "@type": "Object",
           "fields": [
             {

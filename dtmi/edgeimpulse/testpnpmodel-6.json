@@ -1,5 +1,5 @@
 {
-    "@id": "dtmi:nordicsemi:testpnpmodel;2",
+    "@id": "dtmi:edgeimpulse:testpnpmodel;6",
     "displayName": {
       "en": "SarasP15Model"
     },
@@ -43,9 +43,9 @@
         "schema": "point"
       },
       {
-        "@id": "dtmi:nordicsemi:eielephantcollar:AllTelemetry;1",
+        "@id": "dtmi:edgeimpulse:testpnpmodel:AllTelemetry;1",
         "@type": "Telemetry",
-        "name": "body",
+        "name": "telemetrybody",
         "displayName": {
           "en": "Body"
         },
@@ -56,74 +56,28 @@
           "@type": "Object",
           "fields": [
             {
-              "@type": "Telemetry",
-              "comment": "Saras Level percentage",
+              "name": "uplink_message",
               "displayName": {
-                "en": "Saras Battery Level"
-              },
-              "name": "sarasbattery",
-              "schema": "integer"
-            },
-            {
-              "name": "end_device_ids",
-              "displayName": {
-                "en": "Host Name"
+                "en": "Uplink Message"
               },
               "description": {
-                "en": "The hostname of the reader that generated this event."
+                "en": ""
               },
               "schema": {
                 "@type": "Object",
                 "fields": [
                   {
-                    "name": "device_id",
+                    "name": "decoded_payload",
                     "displayName": {
-                      "en": "Device ID"
+                      "en": "Decoded Payload"
                     },
                     "description": {
-                      "en": "Device ID"
+                      "en": ""
                     },
-                    "schema": "string"
+                    "schema": "dtmi:edgeimpulse:testpnpmodel:DecodedPayload;1"   
                   }
                 ]
               }
-            },
-            {
-              "name": "correlation_ids",
-              "displayName": {
-                "en": "Correlation IDs"
-              },
-              "description": {
-                "en": "Correlation IDs"
-              },
-              "schema": {
-                "@type": "Array",
-                "elementSchema": {
-                  "@type": "Object",
-                  "fields": [
-                    {
-                      "name": "arrayValue",
-                      "displayName": {
-                        "en": "Value of array"
-                      },
-                      "description": {
-                        "en": ""
-                      },
-                      "schema": "string"
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "name": "received_at",
-              "displayName": {
-                "en": "Time Stamp"
-              },
-              "description": {
-                "en": "The UTC time at which the event was processed and queued for delivery."
-              },
-              "schema": "dateTime"
             }
           ]
         }
@@ -158,5 +112,75 @@
           }
         }
       }
+      ],
+      "schemas": [
+        {
+          "@id": "dtmi:edgeimpulse:testpnpmodel:DecodedPayload;1",
+          "@type": "Map",
+          "mapKey": {
+            "name": "PayloadNumber",
+            "schema": "string"
+          },
+          "mapValue": {
+            "name": "PayloadValue",
+            "schema": "dtmi:edgeimpulse:testpnpmodel:DecodedPayload:testpnpmodelValue;1"
+          }
+        },
+        {
+          "@id": "dtmi:edgeimpulse:testpnpmodel:DecodedPayload:testpnpmodelValue;1",
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "azi",
+              "displayName": {
+                "en": "AZI"
+              },
+              "description": {
+                "en": ""
+              },
+              "schema": "integer"
+            },
+            {
+              "name": "cn0",
+              "displayName": {
+                "en": "CN0"
+              },
+              "description": {
+                "en": ""
+              },
+              "schema": "integer"
+            },
+            {
+              "name": "con",
+              "displayName": {
+                "en": "CON"
+              },
+              "description": {
+                "en": ""
+              },
+              "schema": "string"
+            },
+            {
+              "name": "ele",
+              "displayName": {
+                "en": "ELE"
+              },
+              "description": {
+                "en": ""
+              },
+              "schema": "integer"
+            },
+            {
+              "name": "id",
+              "displayName": {
+                "en": "ID"
+              },
+              "description": {
+                "en": ""
+              },
+              "schema": "integer"
+            }
+          ]
+        }
       ]
     }
