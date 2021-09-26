@@ -42,14 +42,6 @@
               "schema": "double"
             },
             {
-              "comment": "EI values length",
-              "displayName": {
-                "en": "Values Length"
-              },
-              "name": "length_values",
-              "schema": "long"
-            },
-            {
               "comment": "Device type",
               "displayName": {
                 "en": "Device type"
@@ -70,6 +62,30 @@
                   "elementSchema": "double"
                 }
               }
+            }
+          ]
+        }
+      },
+      {
+        "@id": "dtmi:nordicsemi:eidataforward:Extras;1",
+        "@type": "Telemetry",
+        "name": "extras",
+        "displayName": {
+          "en": "Extras"
+        },
+        "description": {
+          "en": "Telemetry extras"
+        },
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "comment": "EI values length",
+              "displayName": {
+                "en": "Values Length"
+              },
+              "name": "values_length",
+              "schema": "long"
             }
           ]
         }
