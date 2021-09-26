@@ -42,6 +42,14 @@
               "schema": "double"
             },
             {
+              "comment": "EI values length",
+              "displayName": {
+                "en": "Values Length"
+              },
+              "name": "values_length",
+              "schema": "double"
+            },
+            {
               "comment": "Device type",
               "displayName": {
                 "en": "Device type"
