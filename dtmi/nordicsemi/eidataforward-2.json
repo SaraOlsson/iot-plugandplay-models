@@ -46,8 +46,8 @@
               "displayName": {
                 "en": "Values Length"
               },
-              "name": "values_length",
-              "schema": "double"
+              "name": "length_values",
+              "schema": "long"
             },
             {
               "comment": "Device type",
