@@ -1,5 +1,4 @@
 {
-  "@context": "dtmi:dtdl:context;2",
   "@id": "dtmi:com:smartparks:opencollarcat;1",
   "@type": "Interface",
   "displayName": "OpenCollar",
