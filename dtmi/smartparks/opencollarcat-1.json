@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:com:smartparks:opencollarcat;1",
+  "@id": "dtmi:smartparks:opencollarcat;1",
   "@type": "Interface",
   "displayName": "OpenCollar",
   "description": "Reports collar telemetry.",
